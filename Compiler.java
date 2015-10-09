@@ -101,7 +101,27 @@ public class Compiler {
 					e.printStackTrace();
 				}
 			}
-
+			if (lines[i].contains("sin")) {
+				System.out.println(Math.sin(Integer.parseInt(arg[1])));
+			}
+			if (lines[i].contains("cos")) {
+				System.out.println(Math.cos(Integer.parseInt(arg[1])));
+			}
+			if (lines[i].contains("rand")) {
+				System.out.println(Math.random());
+			}
+			if (lines[i].contains("ceil")) {
+				System.out.println(Math.ceil(Integer.parseInt(arg[1])));
+			}
+			if (lines[i].contains("floor")) {
+				System.out.println(Math.floor(Integer.parseInt(arg[1])));
+			}
+			if (lines[i].contains("sqr")) {
+				System.out.println(Math.sqrt(Integer.parseInt(arg[1])));
+			}
+			if (lines[i].contains("tan")) {
+				System.out.println(Math.tan(Integer.parseInt(arg[1])));
+			}
 			if (lines[i].contains("frame")) {
 				int width = Integer.parseInt(arg[2]);
 				int height = Integer.parseInt(arg[3]);
