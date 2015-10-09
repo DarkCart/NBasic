@@ -1,10 +1,10 @@
-package nbasic;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.Scanner;
+
+import javax.swing.JFrame;
 
 public class Compiler {
 
@@ -13,31 +13,19 @@ public class Compiler {
 	public String line;
 	String userInput = "";
 	String writeLine = "";
-	/*
-	boolean frameInit = false;
-	FrameRender r = new FrameRender();
-	*/
 
 	public static void main(String[] args) {
 		textFile = args[0];
-		System.out.println("=== COMPILING: " + textFile + " ===");
-		if (args[0].equals(null)) {
-			System.out.println("You need to provide a text file for input.");
-		}
 		new Compiler();
 	}
 
 	public Compiler() {
-		try {
-			load();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		load();
 	}
 
-	public void load() throws Exception {
-		BufferedReader br = new BufferedReader(new FileReader(textFile));
+	public void load() {
 		try {
+			BufferedReader br = new BufferedReader(new FileReader(textFile));
 			StringBuilder sb = new StringBuilder();
 			line = br.readLine();
 
@@ -47,8 +35,9 @@ public class Compiler {
 				line = br.readLine();
 			}
 			line = sb.toString();
-		} finally {
 			br.close();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		parse(line);
 	}
@@ -112,23 +101,18 @@ public class Compiler {
 					e.printStackTrace();
 				}
 			}
-			/*
-			 * if (lines[i].contains("frame")) { int width =
-			 * Integer.parseInt(arg[2]); int height = Integer.parseInt(arg[3]);
-			 * JFrame frame = new JFrame();
-			 * frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			 * frame.setTitle(arg[1]); frame.setSize(width, height);
-			 * frame.setResizable(false); frame.setVisible(true);
-			 * frame.setLocationRelativeTo(null); frame.add(r); frameInit =
-			 * true; } if (lines[i].contains("rect")) { if (frameInit) { if
-			 * (arg[1].equals("fill")) { r.frect(Integer.parseInt(arg[2]),
-			 * Integer.parseInt(arg[3]), Integer.parseInt(arg[4]),
-			 * Integer.parseInt(arg[5])); } else {
-			 * r.drect(Integer.parseInt(arg[2]), Integer.parseInt(arg[3]),
-			 * Integer.parseInt(arg[4]), Integer.parseInt(arg[5])); }
-			 * 
-			 * } else { System.err.println("Frame must be init first"); }
-			 */
+
+			if (lines[i].contains("frame")) {
+				int width = Integer.parseInt(arg[2]);
+				int height = Integer.parseInt(arg[3]);
+				JFrame frame = new JFrame();
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame.setTitle(arg[1]);
+				frame.setSize(width, height);
+				frame.setResizable(false);
+				frame.setVisible(true);
+				frame.setLocationRelativeTo(null);
+			}
 		}
 	}
-} 
+}
