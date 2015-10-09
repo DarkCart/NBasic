@@ -1,3 +1,3 @@
 # NBasic
 
-The incredibly easy to parse, BASIC-like language by John Whiteaker.
+The incredibly easy to parse, BASIC-like language by John Whiteaker(and friends).
