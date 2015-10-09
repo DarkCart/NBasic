@@ -1,2 +1,0 @@
-print: Window Demo
-frame: 100 100
