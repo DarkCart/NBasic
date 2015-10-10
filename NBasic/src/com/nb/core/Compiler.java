@@ -159,7 +159,7 @@ public class Compiler {
 			}
 			
 			if (lines[i].contains("string")) {
-				v = new Variable(arg[0], arg[1], DataType.STRING);
+				v = new Variable(arg[1], arg[2], DataType.STRING);
 				vars.add(v);
 			}
 		}
