@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
@@ -20,8 +19,7 @@ public class Compiler {
 	String userInput = "";
 	String writeLine = "";
 	Variable v;
-	ArrayList<Variable> vars = new ArrayList<Variable>();
-
+	
 	public static void main(String[] args) {
 		textFile = args[0];
 		new Compiler();
@@ -160,7 +158,12 @@ public class Compiler {
 			
 			if (lines[i].contains("string")) {
 				v = new Variable(arg[1], arg[2], DataType.STRING);
-				vars.add(v);
+			}
+			if (lines[i].contains("int")) {
+				v = new Variable(arg[1], Integer.parseInt(arg[2]), DataType.INT);
+			}
+			if (lines[i].contains("double")) {
+				v = new Variable(arg[1], Double.parseDouble(arg[2]), DataType.DOUBLE);
 			}
 		}
 	}
