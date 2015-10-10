@@ -4,9 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
+
+import com.nb.data.DataType;
+import com.nb.data.Variable;
 
 public class Compiler {
 
@@ -15,6 +19,8 @@ public class Compiler {
 	public String line;
 	String userInput = "";
 	String writeLine = "";
+	Variable v;
+	ArrayList<Variable> vars = new ArrayList<Variable>();
 
 	public static void main(String[] args) {
 		textFile = args[0];
@@ -32,8 +38,7 @@ public class Compiler {
 			line = br.readLine();
 
 			while (line != null) {
-				sb.append(line);
-				sb.append(System.lineSeparator());
+				sb.append(line + "\n");
 				line = br.readLine();
 			}
 			
@@ -54,6 +59,9 @@ public class Compiler {
 			if (lines[i].contains("print")) {
 				if (arg[1].equals("input")) {
 					System.out.println(userInput);
+				} 
+				if (arg[1].equals(v.getName())) {
+					System.out.println(v.getValue());
 				} else {
 					System.out.println(arg[1]);
 				}
@@ -150,6 +158,10 @@ public class Compiler {
 				frame.setLocationRelativeTo(null);
 			}
 			
+			if (lines[i].contains("string")) {
+				v = new Variable(arg[0], arg[1], DataType.STRING);
+				vars.add(v);
+			}
 		}
 	}
 }
