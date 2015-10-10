@@ -75,18 +75,15 @@ public class Compiler {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt((String) v
+						v.setValue(Integer.parseInt((String) v
 								.getValue()) + Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt(arg[1])
+						v.setValue(Integer.parseInt(arg[1])
 								+ Integer.parseInt((String) v.getValue()));
 						break;
-					} else {
-						System.out.println(Integer.parseInt(arg[1])
-								+ Integer.parseInt(arg[2]));
 					}
 				}
 			}
@@ -95,18 +92,15 @@ public class Compiler {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt((String) v
+						v.setValue(Integer.parseInt((String) v
 								.getValue()) - Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt(arg[1])
+						v.setValue(Integer.parseInt(arg[1])
 								- Integer.parseInt((String) v.getValue()));
 						break;
-					} else {
-						System.out.println(Integer.parseInt(arg[1])
-								- Integer.parseInt(arg[2]));
 					}
 				}
 			}
@@ -115,18 +109,15 @@ public class Compiler {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt((String) v
+						v.setValue(Integer.parseInt((String) v
 								.getValue()) * Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt(arg[1])
+						v.setValue(Integer.parseInt(arg[1])
 								* Integer.parseInt((String) v.getValue()));
 						break;
-					} else {
-						System.out.println(Integer.parseInt(arg[1])
-								* Integer.parseInt(arg[2]));
 					}
 				}
 			}
@@ -135,18 +126,15 @@ public class Compiler {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt((String) v
+						v.setValue(Integer.parseInt((String) v
 								.getValue()) / Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt(arg[1])
+						v.setValue(Integer.parseInt(arg[1])
 								/ Integer.parseInt((String) v.getValue()));
 						break;
-					} else {
-						System.out.println(Integer.parseInt(arg[1])
-								/ Integer.parseInt(arg[2]));
 					}
 				}
 			}
@@ -155,24 +143,24 @@ public class Compiler {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt((String) v
+						v.setValue(Integer.parseInt((String) v
 								.getValue()) ^ Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Integer.parseInt(arg[1])
+						v.setValue(Integer.parseInt(arg[1])
 								^ Integer.parseInt((String) v.getValue()));
 						break;
-					} else {
-						System.out.println(Integer.parseInt(arg[1])
-								^ Integer.parseInt(arg[2]));
 					}
 				}
 			}
 
 			if (lines[i].contains("input")) {
 				userInput = new Scanner(System.in).nextLine();
+				if (arg[1] != null) {
+					vars.add(new Variable(arg[1], userInput, DataType.STRING));
+				}
 			}
 
 			if (lines[i].equals("exit")) {
@@ -207,11 +195,9 @@ public class Compiler {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Math.sin(Integer.parseInt((String) v
+						v.setValue(Math.sin(Integer.parseInt((String) v
 								.getValue())));
 						break;
-					} else {
-						System.out.println(Math.sin(Integer.parseInt(arg[1])));
 					}
 				}
 			}
@@ -220,11 +206,9 @@ public class Compiler {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Math.cos(Integer.parseInt((String) v
+						v.setValue(Math.cos(Integer.parseInt((String) v
 								.getValue())));
 						break;
-					} else {
-						System.out.println(Math.cos(Integer.parseInt(arg[1])));
 					}
 				}
 			}
@@ -237,11 +221,9 @@ public class Compiler {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Math.ceil(Integer.parseInt((String) v
+						v.setValue(Math.ceil(Integer.parseInt((String) v
 								.getValue())));
 						break;
-					} else {
-						System.out.println(Math.ceil(Integer.parseInt(arg[1])));
 					}
 				}
 			}
@@ -250,11 +232,9 @@ public class Compiler {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Math.floor(Integer.parseInt((String) v
+						v.setValue(Math.floor(Integer.parseInt((String) v
 								.getValue())));
 						break;
-					} else {
-						System.out.println(Math.floor(Integer.parseInt(arg[1])));
 					}
 				}
 			}
@@ -263,11 +243,9 @@ public class Compiler {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Math.sqrt(Integer.parseInt((String) v
+						v.setValue(Math.sqrt(Integer.parseInt((String) v
 								.getValue())));
 						break;
-					} else {
-						System.out.println(Math.sqrt(Integer.parseInt(arg[1])));
 					}
 				}
 			}
@@ -276,11 +254,9 @@ public class Compiler {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						System.out.println(Math.tan(Integer.parseInt((String) v
+						v.setValue(Math.tan(Integer.parseInt((String) v
 								.getValue())));
 						break;
-					} else {
-						System.out.println(Math.tan(Integer.parseInt(arg[1])));
 					}
 				}
 			}
