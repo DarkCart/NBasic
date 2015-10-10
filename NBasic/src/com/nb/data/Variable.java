@@ -3,9 +3,9 @@ package com.nb.data;
 public class Variable {
 	DataType dataType = DataType.NULL;
 	String name = "";
-	String value = "";
+	Object value = "";
 	
-	public Variable(String name, String value, DataType dataType) {
+	public Variable(String name, Object value, DataType dataType) {
 		this.dataType = dataType;
 		this.name = name;
 		this.value = value;
@@ -19,7 +19,7 @@ public class Variable {
 		return name;
 	}
 	
-	public String getValue() {
+	public Object getValue() {
 		return value;
 	}
 }
