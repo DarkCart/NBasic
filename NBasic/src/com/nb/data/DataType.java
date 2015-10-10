@@ -1,5 +1,5 @@
 package com.nb.data;
 
 public enum DataType {
-	INT, STRING, DOUBLE, NULL;
+	NUM, STRING, DOUBLE, LONG, NULL;
 }
