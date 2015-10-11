@@ -58,10 +58,7 @@ public class Compiler {
 
 			String[] arg = lines[i].split(": ");
 
-			if (lines[i].contains("print")) {
-				if (arg[1].equals("input")) {
-					System.out.println(userInput);
-				}
+			if (arg[0].equals("print")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())) {
 						System.out.println(v.getValue());
@@ -71,7 +68,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("add")) {
+			if (arg[0].equals("add")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -88,7 +85,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("sub")) {
+			if (arg[0].equals("sub")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -105,7 +102,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("mul")) {
+			if (arg[0].equals("mul")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -122,7 +119,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("div")) {
+			if (arg[0].equals("div")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -139,7 +136,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("exp")) {
+			if (arg[0].equals("exp")) {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -156,18 +153,18 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("input")) {
+			if (arg[0].equals("input")) {
 				userInput = new Scanner(System.in).nextLine();
 				if (arg[1] != null) {
 					vars.add(new Variable(arg[1], userInput, DataType.STRING));
 				}
 			}
 
-			if (lines[i].equals("exit")) {
+			if (arg[0].equals("exit")) {
 				System.exit(0);
 			}
 
-			if (lines[i].contains("write")) {
+			if (arg[0].equals("write")) {
 				try {
 					PrintWriter pr = new PrintWriter(arg[1]);
 					if (arg[2].equals("input")) {
@@ -181,7 +178,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("pause") || lines[i].contains("delay")) {
+			if (arg[0].equals("pause") || arg[0].equals("delay")) {
 				try {
 					Thread.sleep(Integer.parseInt(arg[1]));
 				} catch (NumberFormatException e) {
@@ -191,7 +188,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("sin")) {
+			if (arg[0].equals("sin")) {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -202,7 +199,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("cos")) {
+			if (arg[0].equals("cos")) {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -213,11 +210,11 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("rand")) {
+			if (arg[0].equals("rand")) {
 				System.out.println(Math.random());
 			}
 
-			if (lines[i].contains("ceil")) {
+			if (arg[0].equals("ceil")) {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -228,7 +225,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("floor")) {
+			if (arg[0].equals("floor")) {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -239,7 +236,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("sqr")) {
+			if (arg[0].equals("sqr")) {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -250,7 +247,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("tan")) {
+			if (arg[0].equals("tan")) {
 				for (Variable v: vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
@@ -261,7 +258,7 @@ public class Compiler {
 				}
 			}
 
-			if (lines[i].contains("frame")) {
+			if (arg[0].equals("frame")) {
 				int width = Integer.parseInt(arg[2]);
 				int height = Integer.parseInt(arg[3]);
 				JFrame frame = new JFrame();
@@ -273,18 +270,18 @@ public class Compiler {
 				frame.setLocationRelativeTo(null);
 			}
 
-			if (lines[i].contains("string")) {
+			if (arg[0].equals("string")) {
 				vars.add(new Variable(arg[1], arg[2], DataType.STRING));
 			}
-			if (lines[i].contains("double")) {
+			if (arg[0].equals("double")) {
 				vars.add(new Variable(arg[1], Double.parseDouble(arg[2]),
 						DataType.DOUBLE));
 			}
-			if (lines[i].contains("long")) {
+			if (arg[0].equals("long")) {
 				vars.add(new Variable(arg[1], Long.parseLong(arg[2]),
 						DataType.LONG));
 			}
-			if (lines[i].contains("num")) {
+			if (arg[0].equals("num")) {
 				vars.add(new Variable(arg[1], arg[2], DataType.NUM));
 			}
 		}
