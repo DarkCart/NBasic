@@ -7,8 +7,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.JFrame;
-
 import com.nb.data.DataType;
 import com.nb.data.Variable;
 
@@ -259,15 +257,7 @@ public class Compiler {
 			}
 
 			if (arg[0].equals("frame")) {
-				int width = Integer.parseInt(arg[2]);
-				int height = Integer.parseInt(arg[3]);
-				JFrame frame = new JFrame();
-				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				frame.setTitle(arg[1]);
-				frame.setSize(width, height);
-				frame.setResizable(false);
-				frame.setVisible(true);
-				frame.setLocationRelativeTo(null);
+				NBasicFrame.createFrame(arg[1], Integer.parseInt(arg[2]), Integer.parseInt(arg[3]));
 			}
 
 			if (arg[0].equals("string")) {
