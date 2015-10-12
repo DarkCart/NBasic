@@ -126,6 +126,13 @@ public class Compiler {
 				}
 			}
 			
+			//trying out mul symbol
+			if(arg[0].equals("set")) {
+				for(Variable v : vars) {
+					if(arg[1])
+				}
+			}
+			
 			//Divide variables of type NUM
 			if (arg[0].equals("div")) {
 				for (Variable v : vars) {
