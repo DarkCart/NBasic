@@ -127,24 +127,19 @@ public class Compiler {
 			}
 			
 			//Set variable to another if they have same type
-			if(arg[0].equals("set")) {
-				for(Variable v : vars) {
-					if(arg[1].equals(v.getName())) {
-						System.out.println(arg[1] + " is a var");
-						for(Variable v2 : vars) {
-							if(arg[2].equals(v2.getName())) {
-								System.out.println(arg[1] + " is a var");
-								//if they're not the same type, throw exception
-								if(v2.getDataType() != v.getDataType()) {
-									Error e = new Error(arg[1] + " is a different type"
-											+ " than " + arg[2]);
+			if (arg[0].equals("set")) {
+				for (Variable v: vars) {
+					if (arg[1].equals(v.getName())) {
+						for (Variable v1: vars) {
+							if (arg[2].equals(v1.getName())) {
+								if (v.getDataType() == v1.getDataType()) {
+									v = v1;
 								} else {
-									v = v2;
+									new Error("VariableMismatchException");
 								}
-								
-							} else {Error e = new Error("Unknown variable " + arg[2]);}
+							}
 						}
-					} else {Error e = new Error("Unknown variable " + arg[1]);}
+					}
 				}
 			}
 			
