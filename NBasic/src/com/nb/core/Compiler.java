@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 import com.nb.data.DataType;
 import com.nb.data.Variable;
+import com.nb.gui.NBasicFrame;
 
 public class Compiler {
 
@@ -57,11 +58,13 @@ public class Compiler {
 			String[] arg = lines[i].split(": ");
 
 			if (arg[0].equals("print")) {
+				System.out.println(arg[1]);
+			}
+
+			if (arg[0].equals("printv")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())) {
 						System.out.println(v.getValue());
-					} else {
-						System.out.println(arg[1]);
 					}
 				}
 			}
@@ -70,8 +73,8 @@ public class Compiler {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						v.setValue(Integer.parseInt((String) v
-								.getValue()) + Integer.parseInt(arg[2]));
+						v.setValue(Integer.parseInt((String) v.getValue())
+								+ Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
@@ -87,8 +90,8 @@ public class Compiler {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						v.setValue(Integer.parseInt((String) v
-								.getValue()) - Integer.parseInt(arg[2]));
+						v.setValue(Integer.parseInt((String) v.getValue())
+								- Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
@@ -104,8 +107,8 @@ public class Compiler {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						v.setValue(Integer.parseInt((String) v
-								.getValue()) * Integer.parseInt(arg[2]));
+						v.setValue(Integer.parseInt((String) v.getValue())
+								* Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
@@ -121,8 +124,8 @@ public class Compiler {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						v.setValue(Integer.parseInt((String) v
-								.getValue()) / Integer.parseInt(arg[2]));
+						v.setValue(Integer.parseInt((String) v.getValue())
+								/ Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
@@ -135,11 +138,11 @@ public class Compiler {
 			}
 
 			if (arg[0].equals("exp")) {
-				for (Variable v: vars) {
+				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
-						v.setValue(Integer.parseInt((String) v
-								.getValue()) ^ Integer.parseInt(arg[2]));
+						v.setValue(Integer.parseInt((String) v.getValue())
+								^ Integer.parseInt(arg[2]));
 						break;
 					}
 					if (arg[2].equals(v.getName())
@@ -187,7 +190,7 @@ public class Compiler {
 			}
 
 			if (arg[0].equals("sin")) {
-				for (Variable v: vars) {
+				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
 						v.setValue(Math.sin(Integer.parseInt((String) v
@@ -198,7 +201,7 @@ public class Compiler {
 			}
 
 			if (arg[0].equals("cos")) {
-				for (Variable v: vars) {
+				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
 						v.setValue(Math.cos(Integer.parseInt((String) v
@@ -213,7 +216,7 @@ public class Compiler {
 			}
 
 			if (arg[0].equals("ceil")) {
-				for (Variable v: vars) {
+				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
 						v.setValue(Math.ceil(Integer.parseInt((String) v
@@ -224,7 +227,7 @@ public class Compiler {
 			}
 
 			if (arg[0].equals("floor")) {
-				for (Variable v: vars) {
+				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
 						v.setValue(Math.floor(Integer.parseInt((String) v
@@ -235,7 +238,7 @@ public class Compiler {
 			}
 
 			if (arg[0].equals("sqr")) {
-				for (Variable v: vars) {
+				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
 						v.setValue(Math.sqrt(Integer.parseInt((String) v
@@ -246,7 +249,7 @@ public class Compiler {
 			}
 
 			if (arg[0].equals("tan")) {
-				for (Variable v: vars) {
+				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
 							&& v.getDataType() == DataType.NUM) {
 						v.setValue(Math.tan(Integer.parseInt((String) v
@@ -257,7 +260,8 @@ public class Compiler {
 			}
 
 			if (arg[0].equals("frame")) {
-				NBasicFrame.createFrame(arg[1], Integer.parseInt(arg[2]), Integer.parseInt(arg[3]));
+				NBasicFrame.createFrame(arg[1], Integer.parseInt(arg[2]),
+						Integer.parseInt(arg[3]));
 			}
 
 			if (arg[0].equals("string")) {
