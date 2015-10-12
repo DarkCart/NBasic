@@ -126,12 +126,37 @@ public class Compiler {
 				}
 			}
 			
-			//trying out mul symbol
+			//Set variable to another if they have same type
 			if(arg[0].equals("set")) {
 				for(Variable v : vars) {
-					if(arg[1])
+					if(arg[1].equals(v.getName())) {
+						System.out.println(arg[1] + " is a var");
+						for(Variable v2 : vars) {
+							if(arg[2].equals(v2.getName())) {
+								System.out.println(arg[1] + " is a var");
+								//if they're not the same type, throw exception
+								if(v2.getDataType() != v.getDataType()) {
+									Error e = new Error(arg[1] + " is a different type"
+											+ " than " + arg[2]);
+								} else {
+									v = v2;
+								}
+								
+							} else {Error e = new Error("Unknown variable " + arg[2]);}
+						}
+					} else {Error e = new Error("Unknown variable " + arg[1]);}
 				}
 			}
+			
+			/**
+			 * print: Testing setting var to another var
+				string: name: bob
+				string: friend: tom
+				set: name: friend
+				printv: name
+				printv: friend
+				#name should be same as friend
+			 */
 			
 			//Divide variables of type NUM
 			if (arg[0].equals("div")) {
