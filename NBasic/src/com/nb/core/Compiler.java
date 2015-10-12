@@ -299,6 +299,11 @@ public class Compiler {
 			if (arg[0].equals("num")) {
 				vars.add(new Variable(arg[1], arg[2], DataType.NUM));
 			}
+			
+			char[] comments = arg[0].toCharArray();
+			if (Character.toString(comments[0]).equals("#")) {
+				continue;
+			}
 		}
 	}
 }
