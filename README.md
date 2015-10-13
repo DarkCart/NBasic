@@ -14,7 +14,7 @@ To create a variable, declare it's datatype and value.
 
 To print a variable, instead of a value, put a variable name.
 
-**print: greeting**
+**printv: greeting**
 
 As you can see, the syntax uses colons to declare name and value. Built in Functions are very similar.
 
