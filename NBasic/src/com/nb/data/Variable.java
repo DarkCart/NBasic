@@ -1,6 +1,7 @@
 package com.nb.data;
 
 public class Variable {
+	
 	DataType dataType = DataType.NULL;
 	String name = "";
 	Object value = "";

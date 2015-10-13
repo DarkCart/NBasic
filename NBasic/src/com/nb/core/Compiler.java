@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 import com.nb.data.DataType;
 import com.nb.data.Variable;
+import com.nb.data.Vec2;
 import com.nb.gui.NBasicFrame;
 
 public class Compiler {
@@ -307,8 +308,9 @@ public class Compiler {
 			
 			//Creates frame with given parameters
 			if (arg[0].equals("frame")) {
-				NBasicFrame.createFrame(arg[1], Integer.parseInt(arg[2]),
-						Integer.parseInt(arg[3]));
+				vars.add(new NBasicFrame(arg[1],
+						new Vec2(Integer.parseInt(arg[2]),  Integer.parseInt(arg[3])),
+						DataType.NBFRAME));
 			}
 			
 			//Create variables
