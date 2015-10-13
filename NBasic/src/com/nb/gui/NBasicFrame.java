@@ -9,9 +9,14 @@ import com.nb.data.Variable;
 import com.nb.data.Vec2;
 
 public class NBasicFrame extends Variable {
-
-	public NBasicFrame(String title, Vec2 dimensions, DataType dataType) {
-		super(title, dimensions, dataType);
+	
+	String title;
+	Vec2 dimensions;
+	public NBasicFrame(String name, String title, Vec2 dimensions, DataType dataType) {
+		super(name, dimensions, dataType);
+		this.title = title;
+		this.dimensions = dimensions;
+		
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle(title);
@@ -19,6 +24,11 @@ public class NBasicFrame extends Variable {
 		frame.setResizable(false);
 		frame.setVisible(true);
 		frame.setLocationRelativeTo(null);
+	}
+	
+	public Object getValue() {
+		return "var: [" + this.getName() + "] name: [" + title + "] dimensions: [" + dimensions.x + ", " + dimensions.y + "]";
+		
 	}
 
 	public static void createFrame(String title, int width, int height) {

@@ -308,8 +308,8 @@ public class Compiler {
 			
 			//Creates frame with given parameters
 			if (arg[0].equals("frame")) {
-				vars.add(new NBasicFrame(arg[1],
-						new Vec2(Integer.parseInt(arg[2]),  Integer.parseInt(arg[3])),
+				vars.add(new NBasicFrame(arg[1], arg[2],
+						new Vec2(Integer.parseInt(arg[3]),  Integer.parseInt(arg[4])),
 						DataType.NBFRAME));
 			}
 			
