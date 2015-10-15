@@ -333,6 +333,20 @@ public class Compiler {
 			if (Character.toString(comments[0]).equals("#")) {
 				continue;
 			}
+			if (arg[0].equals("for")) {
+				for (int j = 0; j < Integer.parseInt(arg[1]); j++) {
+					if (arg[2].equals("print")) {
+						System.out.println(arg[3]);
+					}
+				}
+			}
+			if (arg[0].equals("while")) {
+				while (Boolean.parseBoolean(arg[1])) {
+					if (arg[2].equals("print")) {
+						System.out.println(arg[3]);
+					}
+				}
+			}
 		}
 	}
 }
