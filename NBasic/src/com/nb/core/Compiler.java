@@ -361,14 +361,6 @@ public class Compiler {
 			if (arg[0].equals("num")) {
 				vars.add(new Variable(arg[1], arg[2], DataType.NUM));
 			}
-			if (arg[0].equals("if")) {
-				if (arg[2] == "==") {
-					System.out.println("Working");
-					if (Integer.parseInt(arg[1]) == Integer.parseInt(arg[3])) {
-						System.out.println("true");
-					}
-				}
-			}
 			char[] comments = arg[0].toCharArray();
 			if (Character.toString(comments[0]).equals("#")) {
 				continue;
@@ -378,12 +370,172 @@ public class Compiler {
 					if (arg[2].equals("print")) {
 						System.out.println(arg[3]);
 					}
+					if (arg[2].equals("add")) {
+						for (Variable v : vars) {
+							if (arg[1].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt((String) v.getValue())
+										+ Integer.parseInt(arg[4]));
+								break;
+							}
+							if (arg[2].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt(arg[3])
+										+ Integer.parseInt((String) v.getValue()));
+								break;
+							} else {
+								System.out.println(Integer.parseInt(arg[3])
+										+ Integer.parseInt(arg[4]));
+								break;
+							}
+						}
+					}
+					if (arg[2].equals("sub")) {
+						for (Variable v : vars) {
+							if (arg[1].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt((String) v.getValue())
+										- Integer.parseInt(arg[4]));
+								break;
+							}
+							if (arg[2].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt(arg[3])
+										- Integer.parseInt((String) v.getValue()));
+								break;
+							} else {
+								System.out.println(Integer.parseInt(arg[3])
+										- Integer.parseInt(arg[4]));
+								break;
+							}
+						}
+					}
+					if (arg[2].equals("mul")) {
+						for (Variable v : vars) {
+							if (arg[1].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt((String) v.getValue())
+										* Integer.parseInt(arg[4]));
+								break;
+							}
+							if (arg[2].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt(arg[3])
+										* Integer.parseInt((String) v.getValue()));
+								break;
+							} else {
+								System.out.println(Integer.parseInt(arg[3])
+										* Integer.parseInt(arg[4]));
+								break;
+							}
+						}
+					}
+					if (arg[2].equals("div")) {
+						for (Variable v : vars) {
+							if (arg[1].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt((String) v.getValue())
+										/ Integer.parseInt(arg[4]));
+								break;
+							}
+							if (arg[2].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt(arg[3])
+										/ Integer.parseInt((String) v.getValue()));
+								break;
+							} else {
+								System.out.println(Integer.parseInt(arg[3])
+										/ Integer.parseInt(arg[4]));
+								break;
+							}
+						}
+					}
 				}
 			}
 			if (arg[0].equals("while")) {
 				while (Boolean.parseBoolean(arg[1])) {
 					if (arg[2].equals("print")) {
 						System.out.println(arg[3]);
+					}
+					if (arg[2].equals("add")) {
+						for (Variable v : vars) {
+							if (arg[1].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt((String) v.getValue())
+										+ Integer.parseInt(arg[4]));
+								break;
+							}
+							if (arg[2].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt(arg[3])
+										+ Integer.parseInt((String) v.getValue()));
+								break;
+							} else {
+								System.out.println(Integer.parseInt(arg[3])
+										+ Integer.parseInt(arg[4]));
+								break;
+							}
+						}
+					}
+					if (arg[2].equals("sub")) {
+						for (Variable v : vars) {
+							if (arg[1].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt((String) v.getValue())
+										- Integer.parseInt(arg[4]));
+								break;
+							}
+							if (arg[2].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt(arg[3])
+										- Integer.parseInt((String) v.getValue()));
+								break;
+							} else {
+								System.out.println(Integer.parseInt(arg[3])
+										- Integer.parseInt(arg[4]));
+								break;
+							}
+						}
+					}
+					if (arg[2].equals("mul")) {
+						for (Variable v : vars) {
+							if (arg[1].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt((String) v.getValue())
+										* Integer.parseInt(arg[4]));
+								break;
+							}
+							if (arg[2].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt(arg[3])
+										* Integer.parseInt((String) v.getValue()));
+								break;
+							} else {
+								System.out.println(Integer.parseInt(arg[3])
+										* Integer.parseInt(arg[4]));
+								break;
+							}
+						}
+					}
+					if (arg[2].equals("div")) {
+						for (Variable v : vars) {
+							if (arg[1].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt((String) v.getValue())
+										/ Integer.parseInt(arg[4]));
+								break;
+							}
+							if (arg[2].equals(v.getName())
+									&& v.getDataType() == DataType.NUM) {
+								v.setValue(Integer.parseInt(arg[3])
+										/ Integer.parseInt((String) v.getValue()));
+								break;
+							} else {
+								System.out.println(Integer.parseInt(arg[3])
+										/ Integer.parseInt(arg[4]));
+								break;
+							}
+						}
 					}
 				}
 			}
