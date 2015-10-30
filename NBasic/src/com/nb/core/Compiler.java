@@ -387,6 +387,10 @@ public class Compiler {
 					}
 				}
 			}
+			
+			if (arg[0].equals("adv")) {
+				System.out.println(Integer.parseInt(arg[1]) + Integer.parseInt(arg[2]) / 2);
+			}
 		}
 	}
 }
