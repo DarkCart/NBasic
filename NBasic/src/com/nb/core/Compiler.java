@@ -57,14 +57,13 @@ public class Compiler {
 		for (int i = 0; i < lines.length; i++) {
 
 			String[] arg = lines[i].split(": ");
-			
-			
-			//Print any type
+
+			// Print any type
 			if (arg[0].equals("print")) {
 				System.out.println(arg[1]);
 			}
-			
-			//Print variable value
+
+			// Print variable value
 			if (arg[0].equals("printv")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())) {
@@ -72,8 +71,8 @@ public class Compiler {
 					}
 				}
 			}
-			
-			//Add variables of type NUM
+
+			// Add variables of type NUM
 			if (arg[0].equals("add")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -87,11 +86,15 @@ public class Compiler {
 						v.setValue(Integer.parseInt(arg[1])
 								+ Integer.parseInt((String) v.getValue()));
 						break;
+					} else {
+						System.out.println(Integer.parseInt(arg[1])
+								+ Integer.parseInt(arg[2]));
+						break;
 					}
 				}
 			}
-			
-			//Subtract variables of type NUM
+
+			// Subtract variables of type NUM
 			if (arg[0].equals("sub")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -105,11 +108,15 @@ public class Compiler {
 						v.setValue(Integer.parseInt(arg[1])
 								- Integer.parseInt((String) v.getValue()));
 						break;
+					} else {
+						System.out.println(Integer.parseInt(arg[1])
+								- Integer.parseInt(arg[2]));
+						break;
 					}
 				}
 			}
-			
-			//Multiply variables of type NUM
+
+			// Multiply variables of type NUM
 			if (arg[0].equals("mul")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -123,15 +130,19 @@ public class Compiler {
 						v.setValue(Integer.parseInt(arg[1])
 								* Integer.parseInt((String) v.getValue()));
 						break;
+					} else {
+						System.out.println(Integer.parseInt(arg[1])
+								* Integer.parseInt(arg[2]));
+						break;
 					}
 				}
 			}
-			
-			//Set variable to another if they have same type
+
+			// Set variable to another if they have same type
 			if (arg[0].equals("set")) {
-				for (Variable v: vars) {
+				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())) {
-						for (Variable v1: vars) {
+						for (Variable v1 : vars) {
 							if (arg[2].equals(v1.getName())) {
 								if (v.getDataType() == v1.getDataType()) {
 									v = v1;
@@ -143,18 +154,14 @@ public class Compiler {
 					}
 				}
 			}
-			
+
 			/**
-			 * print: Testing setting var to another var
-				string: name: bob
-				string: friend: tom
-				set: name: friend
-				printv: name
-				printv: friend
-				#name should be same as friend
+			 * print: Testing setting var to another var string: name: bob
+			 * string: friend: tom set: name: friend printv: name printv: friend
+			 * #name should be same as friend
 			 */
-			
-			//Divide variables of type NUM
+
+			// Divide variables of type NUM
 			if (arg[0].equals("div")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -168,11 +175,15 @@ public class Compiler {
 						v.setValue(Integer.parseInt(arg[1])
 								/ Integer.parseInt((String) v.getValue()));
 						break;
+					} else {
+						System.out.println(Integer.parseInt(arg[1])
+								/ Integer.parseInt(arg[2]));
+						break;
 					}
 				}
 			}
-			
-			//Applies and exponent to a variable
+
+			// Applies and exponent to a variable
 			if (arg[0].equals("exp")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -186,24 +197,27 @@ public class Compiler {
 						v.setValue(Integer.parseInt(arg[1])
 								^ Integer.parseInt((String) v.getValue()));
 						break;
+					} else {
+						System.out.println(Integer.parseInt(arg[1])
+								^ Integer.parseInt(arg[2]));
+						break;
 					}
 				}
 			}
-			
-			//Saves input as a variable
+
+			// Saves input as a variable
 			if (arg[0].equals("input")) {
 				userInput = new Scanner(System.in).nextLine();
 				if (arg[1] != null) {
 					vars.add(new Variable(arg[1], userInput, DataType.STRING));
 				}
 			}
-			
-			//Exits NBasic program
+
+			// Exits NBasic program
 			if (arg[0].equals("exit")) {
 				System.exit(0);
 			}
-			
-			
+
 			if (arg[0].equals("write")) {
 				try {
 					PrintWriter pr = new PrintWriter(arg[1]);
@@ -217,8 +231,8 @@ public class Compiler {
 					e.printStackTrace();
 				}
 			}
-			
-			//Puts program's thread to sleep for a given amount of milliseconds
+
+			// Puts program's thread to sleep for a given amount of milliseconds
 			if (arg[0].equals("pause") || arg[0].equals("delay")) {
 				try {
 					Thread.sleep(Integer.parseInt(arg[1]));
@@ -228,8 +242,8 @@ public class Compiler {
 					e.printStackTrace();
 				}
 			}
-			
-			//Applies sine to a variable
+
+			// Applies sine to a variable
 			if (arg[0].equals("sin")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -237,11 +251,14 @@ public class Compiler {
 						v.setValue(Math.sin(Integer.parseInt((String) v
 								.getValue())));
 						break;
+					} else {
+						System.out.println(Math.sin(Integer.parseInt(arg[1])));
+						break;
 					}
 				}
 			}
-			
-			//Applies cosine to a variable
+
+			// Applies cosine to a variable
 			if (arg[0].equals("cos")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -249,16 +266,19 @@ public class Compiler {
 						v.setValue(Math.cos(Integer.parseInt((String) v
 								.getValue())));
 						break;
+					} else {
+						System.out.println(Math.cos(Integer.parseInt(arg[1])));
+						break;
 					}
 				}
 			}
-			
-			//Prints out a random number
+
+			// Prints out a random number
 			if (arg[0].equals("rand")) {
 				System.out.println(Math.random());
 			}
-			
-			//Rounds variables of type NUM up
+
+			// Rounds variables of type NUM up
 			if (arg[0].equals("ceil")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -266,11 +286,14 @@ public class Compiler {
 						v.setValue(Math.ceil(Integer.parseInt((String) v
 								.getValue())));
 						break;
+					} else {
+						System.out.println(Math.ceil(Integer.parseInt(arg[1])));
+						break;
 					}
 				}
 			}
-			
-			//Rounds variables of type NUM down
+
+			// Rounds variables of type NUM down
 			if (arg[0].equals("floor")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -278,11 +301,15 @@ public class Compiler {
 						v.setValue(Math.floor(Integer.parseInt((String) v
 								.getValue())));
 						break;
+					} else {
+						System.out
+								.println(Math.floor(Integer.parseInt(arg[1])));
+						break;
 					}
 				}
 			}
-			
-			//Applies square root to variables of type NUM
+
+			// Applies square root to variables of type NUM
 			if (arg[0].equals("sqr")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -290,11 +317,14 @@ public class Compiler {
 						v.setValue(Math.sqrt(Integer.parseInt((String) v
 								.getValue())));
 						break;
+					} else {
+						System.out.println(Math.sqrt(Integer.parseInt(arg[1])));
+						break;
 					}
 				}
 			}
-			
-			//Applies tangent to variables of type NUM
+
+			// Applies tangent to variables of type NUM
 			if (arg[0].equals("tan")) {
 				for (Variable v : vars) {
 					if (arg[1].equals(v.getName())
@@ -302,18 +332,21 @@ public class Compiler {
 						v.setValue(Math.tan(Integer.parseInt((String) v
 								.getValue())));
 						break;
+					} else {
+						System.out.println(Math.tan(Integer.parseInt(arg[1])));
+						break;
 					}
 				}
 			}
-			
-			//Creates frame with given parameters
+
+			// Creates frame with given parameters
 			if (arg[0].equals("frame")) {
-				vars.add(new NBasicFrame(arg[1], arg[2],
-						new Vec2(Integer.parseInt(arg[3]),  Integer.parseInt(arg[4])),
+				vars.add(new NBasicFrame(arg[1], arg[2], new Vec2(Integer
+						.parseInt(arg[3]), Integer.parseInt(arg[4])),
 						DataType.NBFRAME));
 			}
-			
-			//Create variables
+
+			// Create variables
 			if (arg[0].equals("string")) {
 				vars.add(new Variable(arg[1], arg[2], DataType.STRING));
 			}
@@ -328,7 +361,14 @@ public class Compiler {
 			if (arg[0].equals("num")) {
 				vars.add(new Variable(arg[1], arg[2], DataType.NUM));
 			}
-			
+			if (arg[0].equals("if")) {
+				if (arg[2] == "==") {
+					System.out.println("Working");
+					if (Integer.parseInt(arg[1]) == Integer.parseInt(arg[3])) {
+						System.out.println("true");
+					}
+				}
+			}
 			char[] comments = arg[0].toCharArray();
 			if (Character.toString(comments[0]).equals("#")) {
 				continue;
