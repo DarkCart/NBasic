@@ -98,7 +98,33 @@ public class Compiler {
 						new Error("NullPointerException: " + line + " doesn't exist.", 1);
 					}
 				}
-
+				
+				// GOTO Function Syntax: goto: 1
+				/*if(arg[0].equals("goto")) {
+					int line = Integer.parseInt(arg[1]); // Parses the int
+					i = 0; // Sets the current line being scanned to the line specified
+				}*/
+				
+				// If Statements Syntax if: a > b: 
+				/*if(arg[0].equals("if")) {
+					String[] statement = arg[1].split("==");
+					statement[0] = statement[0].trim();
+					statement[1] = statement[1].trim();
+					for (Variable v : vars) {
+						if (statement[0].equals(v.getName())) {
+							if (v.getDataType() == DataType.NUM) {
+								int varVal = (int)v.getValue();
+								int checkVal = Integer.parseInt(statement[1]);
+								if(varVal == checkVal) {
+									System.out.println("yay");
+								} else {
+									System.out.println("no");
+								}
+							}
+						}
+					}
+				}*/
+				
 				// Add variables of type NUM
 				if (arg[0].equals("add")) {
 					for (Variable v : vars) {
