@@ -1,3 +1,5 @@
 My middle name is Nathan, so the N in NBasic means Nathan. So, NBasic = Nathan Baisc.
 
+For numbers, it should be "int", but we were to lazy to change it from "num" when we re-wrote the code. You're welcome.
+
 ..Yep, that's all.
