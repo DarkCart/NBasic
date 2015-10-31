@@ -1,3 +1,2 @@
 print: "Type"
-string: text: "asdf"
-print: text
+num: test: 10
