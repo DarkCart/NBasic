@@ -1,421 +1,421 @@
 print: DANCE PARTY! (Hit enter to commence the partying)
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: You gained a party level!
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: PARTY LEVEL 3!!!!
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: \(‚Äò.‚Äô)\\(‚Äò.‚Äô)\\(‚Äò.‚Äô)\
-input
+input: dummyInput
 print: /(‚Äò.‚Äô)//(‚Äò.‚Äô)//(‚Äò.‚Äô)/
-input
+input: dummyInput
 print: NOW FOR A SPICY CANADIAN PARTYYY!!!!
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: 8===>
-input
+input: dummyInput
 print: <===8
-input
+input: dummyInput
 print: I THINK JAY WANTS TO JOIN!!!!
-input
+input: dummyInput
 print: 8==============> ;(
-input
+input: dummyInput
 print: ;( <==============8
-input
+input: dummyInput
 print: 8==============> ;(
-input
+input: dummyInput
 print: ;( <==============8
-input
+input: dummyInput
 print: 8==============> ;(
-input
+input: dummyInput
 print: ;( <==============8
-input
+input: dummyInput
 print: 8==============> ;(
-input
+input: dummyInput
 print: ;( <==============8
-input
+input: dummyInput
 print: 8==============> ;(
-input
+input: dummyInput
 print: ;( <==============8
-input
+input: dummyInput
 print: 8==============> ;(
-input
+input: dummyInput
 print: ;( <==============8
-input
+input: dummyInput
 print: BLACK GUYS RUIN ALL THE FUN!
-input
+input: dummyInput
 exit
