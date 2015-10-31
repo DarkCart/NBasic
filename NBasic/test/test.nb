@@ -1,0 +1,3 @@
+print: "Type"
+input: text
+print: text

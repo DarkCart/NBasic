@@ -11,6 +11,7 @@ import com.nb.data.DataType;
 import com.nb.data.Variable;
 import com.nb.data.Vec2;
 import com.nb.gui.NBasicFrame;
+import com.nb.logging.Error;
 
 public class Compiler {
 
@@ -36,7 +37,7 @@ public class Compiler {
 			BufferedReader br = new BufferedReader(new FileReader(textFile));
 			StringBuilder sb = new StringBuilder();
 			line = br.readLine();
-
+			
 			while (line != null) {
 				sb.append(line + "\n");
 				line = br.readLine();
@@ -49,6 +50,15 @@ public class Compiler {
 		}
 		parse(line);
 	}
+	
+	/*public String checkForEmptyLine(String s) {
+		if(s == null) {
+			s = " ";
+			return s;
+		} else {
+			return s;
+		}
+	}*/
 
 	public void parse(String data) {
 
@@ -60,15 +70,19 @@ public class Compiler {
 
 			// Print any type
 			if (arg[0].equals("print")) {
-				System.out.println(arg[1]);
-			}
-
-			// Print variable value
-			if (arg[0].equals("printv")) {
-				for (Variable v : vars) {
-					if (arg[1].equals(v.getName())) {
-						System.out.println(v.getValue());
+				String line = arg[1].trim(); // Creates var of line and trims away whitespace
+				if(line.startsWith("\"")) { // Checks if it is a raw string or variable name
+					line = line.substring(1, line.length()-1); // Strips away quotes
+					System.out.println(line);
+				} else { // Obviously a variable because there aren't quotes
+					for (Variable v : vars) { // Cycle through all variables know.
+						if (arg[1].equals(v.getName())) { // If it finds a match, print value.
+							System.out.println(v.getValue());
+							return;
+						}
 					}
+					// If no match is found for the variable, yell at programmer because he has a nullpointer
+					new Error("NullPointerException: " + line + " doesn't exist.", 1);
 				}
 			}
 
@@ -147,7 +161,7 @@ public class Compiler {
 								if (v.getDataType() == v1.getDataType()) {
 									v = v1;
 								} else {
-									new Error("VariableMismatchException");
+									new Error("VariableMismatchException", 1);
 								}
 							}
 						}

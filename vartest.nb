@@ -1,3 +1,3 @@
-print: Enter something
+print: "Enter something"
 input: text
-printv: text
+print: text
