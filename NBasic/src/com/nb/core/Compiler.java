@@ -67,6 +67,11 @@ public class Compiler {
 		for (int i = 0; i < lines.length; i++) {
 
 			String[] arg = lines[i].split(": ");
+			//Parses out semi-colons
+			String a = arg[arg.length-1];
+			if(a.charAt(a.length()-1) == ';') { // Check if the last arg contains a semi-colon
+				arg[arg.length-1] = a.replace(";", ""); // Removes semi-colon
+			}
 
 			// Print any type
 			if (arg[0].equals("print")) {
@@ -362,6 +367,11 @@ public class Compiler {
 
 			// Create variables
 			if (arg[0].equals("string")) {
+				if(arg[2].charAt(0) == '"' && arg[2].charAt(arg[2].length()-1) == '"') { // Checks if surrounded by quotes
+					arg[2] = arg[2].substring(1, arg[2].length()-1); // Strips away quotes
+				} else { // Throws type mismatch error because there are no quotes
+					new Error("Type Mismatch: " + arg[2] + " needs to have quotes surrounding it.", 1);
+				}
 				vars.add(new Variable(arg[1], arg[2], DataType.STRING));
 			}
 			if (arg[0].equals("double")) {
