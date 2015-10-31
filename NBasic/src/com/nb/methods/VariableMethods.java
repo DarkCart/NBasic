@@ -9,6 +9,8 @@ import com.nb.logging.Error;
 
 public class VariableMethods {
 	
+	static Scanner input = new Scanner(System.in);
+	
 	public static void check(String[] arg) {
 		// Set variable to another if they have same type
 		if (arg[0].equals("set")) {
@@ -29,9 +31,8 @@ public class VariableMethods {
 		
 		// Saves input as a variable
 		if (arg[0].equals("input")) {
-			Scanner input = new Scanner(System.in);
-			String userInput = input.nextLine();
 			if (arg[1] != null) { // Checks the data type being input into
+				String userInput = input.nextLine();
 				switch(arg[1]) {
 				case "num":
 					Compiler.vars.add(new Variable(arg[2], userInput, DataType.NUM));
@@ -41,7 +42,6 @@ public class VariableMethods {
 					break;
 				}
 			}
-			input.close();
 		}
 		
 		// Create variables

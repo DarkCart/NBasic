@@ -1,6 +1,0 @@
-print: "Please input a number 1-4"
-input: num: test
-if: test == 1: print: "Hi"
-if: test == 2: print: "Bye"
-if: test == 3: print: "Yo"
-if: test == 4: print: "Go"

@@ -1,0 +1,52 @@
+print: "Welcome to the land of NB [1 to leave, 2 to continue]";
+input: num: choice;
+if: choice == 1: print: "Asshole."
+if: choice == 1: exit;
+
+print: "Wise choice my friend. You come to a fork in the road, do you go left or right? [1 to left, 2 to right]"
+input: num: fork;
+if: fork == 1: print: "You come to a house, do you go in the front door or the back? [1 to front, 2 to back]"
+if: fork == 2: print: "You come to a river, do you cross it? [1 to cross, 2 to drown]"
+
+#This is where stuff gets complicated
+input: num: choice2
+if: fork == 1: if: choice2 == 1: print: "You enter the house from the front, alerting the residents. [1 to continue to fight residents, 2 to peacefully surrender]"
+if: fork == 1: if: choice2 == 2: print: "You enter the house from the back, no one is alerted. [1 to continue to sneak, 2 to leave]"
+if: fork == 2: if: choice2 == 1: print: "You cross the river. However, while you were crossing you cut your leg on a rock. [1 to grab a leaf and bandage it, 2 to suck it up, and deal with it]"
+if: fork == 2: if: choice2 == 2: print: "You died. Why the hell would you drown yourself?"
+if: fork == 2: if: choice2 == 2: exit
+
+#Even more complicated now
+input: num: choice3
+if: fork == 1: if: choice2 == 1: if: choice3 == 1: print: "You fight the residents, too bad they have guns. You're screwed bro."
+if: fork == 1: if: choice2 == 1: if: choice3 == 2: print: "You leave the house, and find a shed in their backyard. [1 to go through it, 2 to keep walking]"
+if: fork == 2: if: choice2 == 1: if: choice3 == 1: print: "You grab a leaf to bandage your wound. Turns out it was poisonous. You die an agonizing death."
+if: fork == 2: if: choice2 == 1: if: choice3 == 1: exit
+if: fork == 2: if: choice2 == 1: if: choice3 == 2: print: "You keep on walking down the path. Struggling to walk do to your hindered leg. You feel dizzy. [1 to sit and rest, 2 to keep going]"
+if: fork == 1: if: choice2 == 2: if: choice3 == 1: print: "You step on a creaky board. They notice your presence and shoot you."
+if: fork == 1: if: choice2 == 2: if: choice3 == 1: exit
+if: fork == 1: if: choice2 == 2: if: choice3 == 2: print: "You leave the house, and find a shed in their backyard. [1 to go through it, 2 to keep walking]"
+
+#Still complicated
+input: num: choice4
+if: fork == 1: if: choice2 == 1: if: choice4 == 1: print: "BOOM HEADSHOT. The residents of the house snipe you."
+if: fork == 1: if: choice2 == 1: if: choice4 == 1: exit
+if: fork == 1: if: choice2 == 2: if: choice4 == 1: print: "BOOM HEADSHOT. The residents of the house snipe you."
+if: fork == 1: if: choice2 == 2: if: choice4 == 1: exit
+if: fork == 1: if: choice2 == 1: if: choice4 == 2: print: "You keep walking. You stumble upon a rock. [1 to pick it up, 2 to kick it]"
+if: fork == 1: if: choice2 == 2: if: choice4 == 2: print: "You keep walking. You stumble upon a rock. [1 to pick it up, 2 to kick it]"
+if: fork == 2: if: choice2 == 1: if: choice3 == 2: if: choice4 == 1: print: "You lie down, and rest on the side of the path. Something hits you in the head, and wakes you up. It's a small rock. [1 to pick it up, 2 to throw it back]"
+if: fork == 2: if: choice2 == 1: if: choice3 == 2: if: choice4 == 2: print: "You pass out on the path, and get eat by killer ants and raccoons."
+if: fork == 2: if: choice2 == 1: if: choice3 == 2: if: choice4 == 2: exit
+
+# Okay I'm starting to understand
+input: num: choice5
+if: fork == 1: if: choice2 == 1: if: choice4 == 2: if: choice5 == 1: print: "Turns out its a gold nugget. You have obtained ultimate victory. YOU WON!"
+if: fork == 1: if: choice2 == 2: if: choice4 == 2: if: choice5 == 1: print: "Turns out its a gold nugget. You have obtained ultimate victory. YOU WON!"
+if: fork == 2: if: choice2 == 1: if: choice4 == 2: if: choice5 == 1: print: "Turns out its a gold nugget. You have obtained ultimate victory. YOU WON!"
+if: fork == 2: if: choice2 == 1: if: choice3 == 2: if: choice4 == 1: if: choice5 == 1: print: "Turns out its a gold nugget. You have obtained ultimate victory. YOU WON!"
+if: fork == 2: if: choice2 == 1: if: choice3 == 2: if: choice4 == 1: if: choice5 == 2: print: "The rock lands in the grass. Oh wait, was that gold? Too late now."
+if: fork == 1: if: choice2 == 1: if: choice4 == 2: if: choice5 == 2: print: "You kicked the rock, and then realized it was gold. Too bad it rolled into the grass, where you will never see it again."
+if: fork == 1: if: choice2 == 2: if: choice4 == 2: if: choice5 == 2: print: "You kicked the rock, and then realized it was gold. Too bad it rolled into the grass, where you will never see it again."
+exit
+
