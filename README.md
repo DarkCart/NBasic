@@ -17,6 +17,9 @@ You may print variables as well.
 **print: greeting**
 
 There are other math functions available to use such as "add", "sub", "mul", "div", "cos", "sin", "tan", etc.
+
 ***num: a: 100***
+
 ***num: b: 50***
-**add: a: b**
+
+***add: a: b***
