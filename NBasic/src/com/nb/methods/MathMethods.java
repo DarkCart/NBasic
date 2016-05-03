@@ -72,7 +72,7 @@ public class MathMethods {
 				}
 			}
 		}
-		
+
 		// Divide variables of type NUM
 		if (arg[0].equals("div")) {
 			for (Variable v : Compiler.vars) {
@@ -94,7 +94,7 @@ public class MathMethods {
 				}
 			}
 		}
-		
+
 		// Applies and exponent to a variable
 		if (arg[0].equals("exp")) {
 			for (Variable v : Compiler.vars) {
@@ -116,14 +116,13 @@ public class MathMethods {
 				}
 			}
 		}
-		
+
 		// Applies sine to a variable
 		if (arg[0].equals("sin")) {
 			for (Variable v : Compiler.vars) {
 				if (arg[1].equals(v.getName())
 						&& v.getDataType() == DataType.NUM) {
-					v.setValue(Math.sin(Integer.parseInt((String) v
-							.getValue())));
+					v.setValue(Math.sin(Integer.parseInt((String) v.getValue())));
 					break;
 				} else {
 					System.out.println(Math.sin(Integer.parseInt(arg[1])));
@@ -137,8 +136,7 @@ public class MathMethods {
 			for (Variable v : Compiler.vars) {
 				if (arg[1].equals(v.getName())
 						&& v.getDataType() == DataType.NUM) {
-					v.setValue(Math.cos(Integer.parseInt((String) v
-							.getValue())));
+					v.setValue(Math.cos(Integer.parseInt((String) v.getValue())));
 					break;
 				} else {
 					System.out.println(Math.cos(Integer.parseInt(arg[1])));
@@ -146,7 +144,7 @@ public class MathMethods {
 				}
 			}
 		}
-		
+
 		// Prints out a random number
 		if (arg[0].equals("rand")) {
 			System.out.println(Math.random());
@@ -157,8 +155,7 @@ public class MathMethods {
 			for (Variable v : Compiler.vars) {
 				if (arg[1].equals(v.getName())
 						&& v.getDataType() == DataType.NUM) {
-					v.setValue(Math.ceil(Integer.parseInt((String) v
-							.getValue())));
+					v.setValue(Math.ceil(Integer.parseInt((String) v.getValue())));
 					break;
 				} else {
 					System.out.println(Math.ceil(Integer.parseInt(arg[1])));
@@ -176,8 +173,7 @@ public class MathMethods {
 							.getValue())));
 					break;
 				} else {
-					System.out
-							.println(Math.floor(Integer.parseInt(arg[1])));
+					System.out.println(Math.floor(Integer.parseInt(arg[1])));
 					break;
 				}
 			}
@@ -188,8 +184,7 @@ public class MathMethods {
 			for (Variable v : Compiler.vars) {
 				if (arg[1].equals(v.getName())
 						&& v.getDataType() == DataType.NUM) {
-					v.setValue(Math.sqrt(Integer.parseInt((String) v
-							.getValue())));
+					v.setValue(Math.sqrt(Integer.parseInt((String) v.getValue())));
 					break;
 				} else {
 					System.out.println(Math.sqrt(Integer.parseInt(arg[1])));
@@ -203,8 +198,7 @@ public class MathMethods {
 			for (Variable v : Compiler.vars) {
 				if (arg[1].equals(v.getName())
 						&& v.getDataType() == DataType.NUM) {
-					v.setValue(Math.tan(Integer.parseInt((String) v
-							.getValue())));
+					v.setValue(Math.tan(Integer.parseInt((String) v.getValue())));
 					break;
 				} else {
 					System.out.println(Math.tan(Integer.parseInt(arg[1])));
@@ -213,5 +207,5 @@ public class MathMethods {
 			}
 		}
 	}
-	
+
 }

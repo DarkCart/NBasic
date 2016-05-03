@@ -1,7 +1,5 @@
 package com.nb.gui;
 
-import java.util.Vector;
-
 import javax.swing.JFrame;
 
 import com.nb.data.DataType;

@@ -2,7 +2,5 @@ package com.nb.data;
 
 public enum DataType {
 	
-	NUM, STRING, DOUBLE, LONG, NULL,
-	
-	NBFRAME;
+	NUM, STRING, DOUBLE, LONG, CONST, BOOLEAN, NULL;
 }

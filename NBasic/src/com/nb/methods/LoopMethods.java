@@ -1,8 +1,6 @@
 package com.nb.methods;
 
 import com.nb.core.Compiler;
-import com.nb.data.DataType;
-import com.nb.data.Variable;
 
 public class LoopMethods {
 

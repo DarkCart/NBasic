@@ -1,0 +1,7 @@
+print: "Hello World"
+bool: test: true
+print: test
+const: ctest: 10
+//set: ctest: 20
+time
+date

@@ -10,6 +10,7 @@ import com.nb.methods.FileMethods;
 import com.nb.methods.FrameMethods;
 import com.nb.methods.LoopMethods;
 import com.nb.methods.MathMethods;
+import com.nb.methods.MiscMethods;
 import com.nb.methods.OrientationMethods;
 import com.nb.methods.VariableMethods;
 
@@ -37,13 +38,13 @@ public class Compiler {
 		try {
 			File file = new File(textFile);
 			Scanner scanner = new Scanner(file);
-			StringBuilder sb = new StringBuilder();			
+			StringBuilder sb = new StringBuilder();
 			while (scanner.hasNextLine()) {
 				line = scanner.nextLine();
-				if(line != "") {
+				if (line != "") {
 					sb.append(line + "\n");
 				}
-				
+
 			}
 
 			line = sb.toString();
@@ -52,44 +53,44 @@ public class Compiler {
 			e.printStackTrace();
 		}
 		String[] lines = line.split("\n");
-		for(currentLine = 0; currentLine < lines.length; currentLine++) {
+		for (currentLine = 0; currentLine < lines.length; currentLine++) {
 			parse(lines[currentLine]);
 		}
 	}
-	
-	/*public String checkForEmptyLine(String s) {
-		if(s == null) {
-			s = " ";
-			return s;
-		} else {
-			return s;
-		}
-	}*/
+
+	/*
+	 * public String checkForEmptyLine(String s) { if(s == null) { s = " ";
+	 * return s; } else { return s; } }
+	 */
 
 	public static void parse(String data) {
-			if(!data.startsWith("//") && !data.startsWith("#")) {
-				String[] arg = data.split(":");
-				String longString = "";
-				for(int ii = 0; ii < arg.length; ii++) {
-					longString = longString.concat(arg[ii]);
-					arg[ii] = arg[ii].trim(); // Trims off all whitespace so that people don't need to put spaces
-				}
-				//Parses out semi-colons
-				if(longString.length() != 0) {
-					String a = arg[arg.length-1];
-					if(a.charAt(a.length()-1) == ';') { // Check if the last arg contains a semi-colon
-						arg[arg.length-1] = a.replace(";", ""); // Removes semi-colon
-					}
-				}
-				
-				//////////////////// Call Actual Methods ////////////////////
-				BasicMethods.check(arg);
-				OrientationMethods.check(arg);
-				MathMethods.check(arg);
-				VariableMethods.check(arg);
-				FileMethods.check(arg);
-				FrameMethods.check(arg);
-				LoopMethods.check(arg);
+		if (!data.startsWith("//") && !data.startsWith("#")) {
+			String[] arg = data.split(":");
+			String longString = "";
+			for (int ii = 0; ii < arg.length; ii++) {
+				longString = longString.concat(arg[ii]);
+				arg[ii] = arg[ii].trim(); // Trims off all whitespace so that
+											// people don't need to put spaces
 			}
+			// Parses out semi-colons
+			if (longString.length() != 0) {
+				String a = arg[arg.length - 1];
+				if (a.charAt(a.length() - 1) == ';') { // Check if the last arg
+														// contains a semi-colon
+					arg[arg.length - 1] = a.replace(";", ""); // Removes
+																// semi-colon
+				}
+			}
+
+			// ////////////////// Call Actual Methods ////////////////////
+			BasicMethods.check(arg);
+			OrientationMethods.check(arg);
+			MathMethods.check(arg);
+			VariableMethods.check(arg);
+			FileMethods.check(arg);
+			FrameMethods.check(arg);
+			LoopMethods.check(arg);
+			MiscMethods.check(arg);
+		}
 	}
 }
