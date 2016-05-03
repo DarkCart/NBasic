@@ -5,8 +5,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 import com.nb.core.Compiler;
+import com.nb.data.Function;
 import com.nb.data.Variable;
-import com.nb.logging.Error;
 
 public class MiscMethods {
 
@@ -15,8 +15,6 @@ public class MiscMethods {
 			for (Variable v : Compiler.vars) {
 				if (arg[1].equals(v.getName())) {
 					System.out.println(v.getDataType());
-				} else {
-					new Error("Variable not found", 1);
 				}
 			}
 		}
@@ -27,6 +25,16 @@ public class MiscMethods {
 			Calendar cal = Calendar.getInstance();
 			SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 			System.out.println(sdf.format(cal.getTime()));
+		}
+		if (arg[0].equals("function")) {
+			String command = "";
+			for(int l = 2; l < arg.length; l++) {
+				command = command + arg[l]+":";
+			}
+			Compiler.functions.add(new Function(arg[1], command));
+		}
+		if (arg[0].equals("break")) {
+			Compiler.currentLine += 1;
 		}
 	}
 }

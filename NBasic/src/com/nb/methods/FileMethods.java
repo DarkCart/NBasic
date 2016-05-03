@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+import com.nb.core.Compiler;
+
 public class FileMethods {
 
 	public static void check(String[] arg) {
@@ -21,6 +23,9 @@ public class FileMethods {
 				e.printStackTrace();
 			}
 			input.close();
+		}
+		if (arg[0].equals("comp")) {
+			Compiler.textFile = arg[1];
 		}
 	}
 

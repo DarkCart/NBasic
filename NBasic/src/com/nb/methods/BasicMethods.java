@@ -1,6 +1,7 @@
 package com.nb.methods;
 
 import com.nb.core.Compiler;
+import com.nb.data.Function;
 import com.nb.data.Variable;
 import com.nb.logging.Error;
 
@@ -22,6 +23,13 @@ public class BasicMethods {
 				}
 				// If no match is found for the variable, yell at programmer because he has a nullpointer
 				new Error("NullPointerException: " + line + " doesn't exist.", 1);
+			}
+		} else {
+			for (Function f: Compiler.functions) {
+				if (f.getName().equals(arg[0])) {
+					Compiler.parse(f.getAction());
+					return;
+				}
 			}
 		}
 	}

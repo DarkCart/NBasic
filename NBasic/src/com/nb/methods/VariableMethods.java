@@ -83,6 +83,10 @@ public class VariableMethods {
 			Compiler.vars.add(new Variable(arg[1],
 					Boolean.parseBoolean(arg[2]), DataType.BOOLEAN));
 		}
+		if (arg[0].equals("float")) {
+			Compiler.vars.add(new Variable(arg[1], Float.parseFloat(arg[2]),
+					DataType.FLOAT));
+		}
 	}
 
 }

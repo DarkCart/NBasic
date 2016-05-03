@@ -206,6 +206,19 @@ public class MathMethods {
 				}
 			}
 		}
+		// Applies Absolute value to NUM
+		if (arg[0].equals("abs")) {
+			for (Variable v : Compiler.vars) {
+				if (arg[1].equals(v.getName())
+						&& v.getDataType() == DataType.NUM) {
+					v.setValue(Math.abs(Integer.parseInt((String) v.getValue())));
+					break;
+				} else {
+					System.out.println(Math.abs(Integer.parseInt(arg[1])));
+					break;
+				}
+			}
+		}
 	}
 
 }

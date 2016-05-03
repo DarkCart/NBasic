@@ -5,3 +5,7 @@ const: ctest: 10
 //set: ctest: 20
 time
 date
+function: test: print: "Boom Baby!"
+test
+typeof: ctest
+abs: -10

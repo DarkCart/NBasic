@@ -4,10 +4,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.nb.data.Function;
 import com.nb.data.Variable;
 import com.nb.methods.BasicMethods;
 import com.nb.methods.FileMethods;
-import com.nb.methods.FrameMethods;
 import com.nb.methods.LoopMethods;
 import com.nb.methods.MathMethods;
 import com.nb.methods.MiscMethods;
@@ -18,23 +18,20 @@ public class Compiler {
 
 	public static String textFile;
 	public Scanner fileScanner;
-	public String line;
+	public static String line;
 	String userInput = "";
 	String writeLine = "";
 	public static int currentLine = 0;
 
 	public static ArrayList<Variable> vars = new ArrayList<Variable>();
+	public static ArrayList<Function> functions = new ArrayList<Function>();
 
 	public static void main(String[] args) {
 		textFile = args[0];
-		new Compiler();
+		load(textFile);
 	}
 
-	public Compiler() {
-		load();
-	}
-
-	public void load() {
+	public static void load(String textFile) {
 		try {
 			File file = new File(textFile);
 			Scanner scanner = new Scanner(file);
@@ -88,7 +85,6 @@ public class Compiler {
 			MathMethods.check(arg);
 			VariableMethods.check(arg);
 			FileMethods.check(arg);
-			FrameMethods.check(arg);
 			LoopMethods.check(arg);
 			MiscMethods.check(arg);
 		}
