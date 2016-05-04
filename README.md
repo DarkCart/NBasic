@@ -29,3 +29,5 @@ You can also have functions.
 **function: functionName: functionAction**
 
 While and for loops are implemented, so are if statements. As of NBasic 1.2 all GUI functionality has been removed.
+
+Older versions of NBasic are on the "jw" branch
