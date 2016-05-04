@@ -18,9 +18,7 @@ public class Compiler {
 
 	public static String textFile;
 	public Scanner fileScanner;
-	public static String line;
-	String userInput = "";
-	String writeLine = "";
+	public static String line = "";
 	public static int currentLine = 0;
 
 	public static ArrayList<Variable> vars = new ArrayList<Variable>();
@@ -28,10 +26,14 @@ public class Compiler {
 
 	public static void main(String[] args) {
 		textFile = args[0];
-		load(textFile);
+		String line = load(textFile);
+		String[] lines = line.split("\n");
+		for (currentLine = 0; currentLine < lines.length; currentLine++) {
+			parse(lines[currentLine]);
+		}
 	}
 
-	public static void load(String textFile) {
+	public static String load(String textFile) {
 		try {
 			File file = new File(textFile);
 			Scanner scanner = new Scanner(file);
@@ -49,10 +51,7 @@ public class Compiler {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		String[] lines = line.split("\n");
-		for (currentLine = 0; currentLine < lines.length; currentLine++) {
-			parse(lines[currentLine]);
-		}
+		return line;
 	}
 
 	/*

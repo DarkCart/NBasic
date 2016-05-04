@@ -1,3 +1,4 @@
+include: test/dummy.nb
 print: "Hello World"
 bool: test: true
 print: test
