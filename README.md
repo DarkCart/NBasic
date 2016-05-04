@@ -23,3 +23,9 @@ There are other math functions available to use such as "add", "sub", "mul", "di
 **num: b: 50**
 
 **add: a: b**
+
+You can also have functions.
+
+**function: functionName: functionAction**
+
+While and for loops are implemented, so are if statements. As of NBasic 1.2 all GUI functionality has been removed.
